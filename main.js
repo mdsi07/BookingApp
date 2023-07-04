@@ -27,7 +27,7 @@ function onSubmit(e) {
     const li = document.createElement('li');
 
     // Add text node with input values
-    // li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
+    li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
 
     // Add HTML
     // li.innerHTML = `<strong>${nameInput.value}</strong>: ${emailInput.value}`;
@@ -49,7 +49,7 @@ function onSubmit(e) {
     let userDetails_serialized = JSON.stringify(userDetails);
 
     // Objects to Local Storage
-    localStorage.setItem('userDetails',userDetails_serialized);
+    localStorage.setItem(userDetails.email,userDetails_serialized);
 
     // if we want String to Objects then
     // let userDetails_deserialized = JSON.parse(localStorage.getItem('userDetails'));
