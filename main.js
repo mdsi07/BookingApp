@@ -27,7 +27,7 @@ function onSubmit(e) {
     const li = document.createElement('li');
 
     // Add text node with input values
-    li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
+    // li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
 
     // Add HTML
     // li.innerHTML = `<strong>${nameInput.value}</strong>: ${emailInput.value}`;
