@@ -36,8 +36,23 @@ function onSubmit(e) {
     userList.appendChild(li);
 
     //Local Storage
-    localStorage.setItem('name:',nameInput.value);
-    localStorage.setItem('email:',emailInput.value);
+    // localStorage.setItem('name:',nameInput.value);
+    // localStorage.setItem('email:',emailInput.value);
+
+    // Creating Object
+    let userDetails = {
+      name: nameInput.value,
+      email: emailInput.value
+    };
+
+    // convert object to String
+    let userDetails_serialized = JSON.stringify(userDetails);
+
+    // Objects to Local Storage
+    localStorage.setItem('userDetails',userDetails_serialized);
+
+    // if we want String to Objects then
+    // let userDetails_deserialized = JSON.parse(localStorage.getItem('userDetails'));
 
     // Clear fields
     nameInput.value = '';
